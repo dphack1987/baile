@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clases de Baile para Hoteles | Servicios Profesionales</title>
+    <title>Clases de Baile para Hoteles | Experiencia Inmersiva</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-toggle" id="musicToggle" title="Activar/Desactivar música">
+            <i class="fas fa-music"></i>
+        </button>
+        <audio id="backgroundMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="logo">
-                <h1>Baile para Hoteles</h1>
+                <h1>Baile <span class="logo-accent">Pro</span></h1>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#modalidades">Modalidades</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <a href="https://wa.me/1234567890" class="header-cta" target="_blank">
+                <i class="fab fa-whatsapp"></i> Contactar
+            </a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,19 +44,40 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Clases de Baile para Hoteles</h1>
-            <p>Transforme la experiencia de sus huéspedes con clases de baile exclusivas y memorables</p>
-            <a href="#contacto" class="cta-button">Solicitar Información</a>
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> Experiencia Premium
+            </div>
+            <h1>Transforme la Experiencia de sus Huéspedes</h1>
+            <p>Clases de baile exclusivas que crean momentos inolvidables en su hotel</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="cta-button primary">
+                    <i class="fab fa-whatsapp"></i> Solicitar Información
+                </a>
+                <a href="#servicios" class="cta-button secondary">
+                    <i class="fas fa-play"></i> Ver Servicios
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Hoteles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Clases</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-            <div class="dance-icon">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="2"/>
-                    <path d="M30 50 Q50 20 70 50 Q50 80 30 50" fill="#D4AF37" opacity="0.3"/>
-                    <circle cx="40" cy="45" r="5" fill="#D4AF37"/>
-                    <circle cx="60" cy="45" r="5" fill="#D4AF37"/>
-                </svg>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
         </div>
     </section>
@@ -50,94 +85,131 @@
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <p class="section-subtitle">Experiencias únicas de baile para cada tipo de evento</p>
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2>Experiencias Únicas de Baile</h2>
+                <p>Desde clases introductorias hasta shows profesionales, tenemos todo lo que su hotel necesita</p>
+            </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🎭</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
                     <h3>Clases Principiantes</h3>
-                    <p>Clases introductorias para huéspedes sin experiencia previa. Perfectas para breaking the ice y crear momentos memorables.</p>
+                    <p>Clases introductorias perfectas para breaking the ice y crear momentos memorables entre huéspedes.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20las%20clases%20principiantes" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="featured-badge">Más Popular</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Clases Grupales</h3>
+                    <p>Grupos pequeños de 5-10 personas. Ambiente social, divertido y perfecto para crear comunidad.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20las%20clases%20grupales" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">💃</div>
-                    <h3>Clases Intermedias</h3>
-                    <p>Para huéspedes con experiencia que desean mejorar su técnica y aprender nuevos estilos de baile.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🎪</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-calendar-star"></i>
+                    </div>
                     <h3>Eventos Especiales</h3>
-                    <p>Clases personalizadas para bodas, aniversarios, fiestas corporativas y eventos especiales en su hotel.</p>
+                    <p>Clases personalizadas para bodas, aniversarios, fiestas corporativas y eventos especiales.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20eventos%20especiales" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">👨‍👩‍👧‍👦</div>
-                    <h3>Clases Familiares</h3>
-                    <p>Sesiones diseñadas para toda la familia, donde padres e hijos pueden disfrutar bailando juntos.</p>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Workshops</h3>
+                    <p>Sesiones intensivas de 2-3 horas con temas específicos. Resultados inmediatos para eventos.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20los%20workshops" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">💼</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
                     <h3>Programas Corporativos</h3>
-                    <p>Actividades de team building y sesiones especiales para grupos corporativos y convenciones.</p>
+                    <p>Team building y sesiones especiales para grupos corporativos y convenciones de negocios.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20programas%20corporativos" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🌟</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
                     <h3>Shows en Vivo</h3>
-                    <p>Presentaciones profesionales de baile para eventos de gala, inauguraciones y celebraciones especiales.</p>
+                    <p>Presentaciones profesionales para eventos de gala, inauguraciones y celebraciones especiales.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20shows%20en%20vivo" class="service-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Cotizar
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modalities Section -->
-    <section id="modalidades" class="modalities">
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
         <div class="container">
-            <h2>Modalidades de Clases</h2>
-            <p class="section-subtitle">Opciones flexibles adaptadas a las necesidades de su hotel</p>
+            <div class="section-header">
+                <span class="section-tag">Nuestro Portafolio</span>
+                <h2>Galería de Experiencias</h2>
+                <p>Descubre la magia de nuestras clases a través de imágenes</p>
+            </div>
             
-            <div class="modalities-container">
-                <div class="modality-card">
-                    <h3>Clases Individuales</h3>
-                    <ul>
-                        <li>Atención personalizada</li>
-                        <li>Horarios flexibles</li>
-                        <li>Progreso acelerado</li>
-                        <li>Ideal para parejas</li>
-                    </ul>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/page_1.png" alt="Portafolio Página 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Introducción</h3>
+                        <a href="https://wa.me/1234567890" class="gallery-cta" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Más Info
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="modality-card">
-                    <h3>Clases Grupales</h3>
-                    <ul>
-                        <li>Grupos pequeños (5-10 personas)</li>
-                        <li>Ambiente social y divertido</li>
-                        <li>Costo accesible</li>
-                        <li>Perfecto para crear comunidad</li>
-                    </ul>
+                <div class="gallery-item">
+                    <img src="images/page_2.png" alt="Portafolio Página 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Servicios</h3>
+                        <a href="https://wa.me/1234567890" class="gallery-cta" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Más Info
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="modality-card">
-                    <h3>Workshops</h3>
-                    <ul>
-                        <li>Sesiones intensivas de 2-3 horas</li>
-                        <li>Temas específicos</li>
-                        <li>Ideal para eventos</li>
-                        <li>Resultados inmediatos</li>
-                    </ul>
+                <div class="gallery-item">
+                    <img src="images/page_3.png" alt="Portafolio Página 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Modalidades</h3>
+                        <a href="https://wa.me/1234567890" class="gallery-cta" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Más Info
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="modality-card">
-                    <h3>Programas Semanales</h3>
-                    <ul>
-                        <li>Clases regulares durante la estancia</li>
-                        <li>Continuidad en el aprendizaje</li>
-                        <li>Descuentos por paquetes</li>
-                        <li>Experiencia completa</li>
-                    </ul>
+                <div class="gallery-item">
+                    <img src="images/page_4.png" alt="Portafolio Página 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Contacto</h3>
+                        <a href="https://wa.me/1234567890" class="gallery-cta" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Más Info
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,33 +218,42 @@
     <!-- Dance Styles Section -->
     <section class="dance-styles">
         <div class="container">
-            <h2>Estilos de Baile</h2>
-            <p class="section-subtitle">Ofrecemos una variedad de estilos para todos los gustos</p>
+            <div class="section-header">
+                <span class="section-tag">Estilos de Baile</span>
+                <h2>Ofrecemos una Variedad de Estilos</h2>
+                <p>Desde salsa clásica hasta tango argentino, tenemos algo para todos los gustos</p>
+            </div>
             
             <div class="styles-grid">
-                <div class="style-item">
-                    <span class="style-icon">💃</span>
+                <div class="style-card">
+                    <div class="style-icon">💃</div>
                     <h3>Salsa</h3>
+                    <p>Ritmo latino apasionado</p>
                 </div>
-                <div class="style-item">
-                    <span class="style-icon">🎵</span>
+                <div class="style-card">
+                    <div class="style-icon">🎵</div>
                     <h3>Bachata</h3>
+                    <p>Romance y sensualidad</p>
                 </div>
-                <div class="style-item">
-                    <span class="style-icon">🌹</span>
+                <div class="style-card">
+                    <div class="style-icon">🌹</div>
                     <h3>Tango</h3>
+                    <p>Elegancia argentina</p>
                 </div>
-                <div class="style-item">
-                    <span class="style-icon">⚡</span>
+                <div class="style-card">
+                    <div class="style-icon">⚡</div>
                     <h3>Merenque</h3>
+                    <p>Energía caribeña</p>
                 </div>
-                <div class="style-item">
-                    <span class="style-icon">🎶</span>
+                <div class="style-card">
+                    <div class="style-icon">🎶</div>
                     <h3>Cumbia</h3>
+                    <p>Folklor vibrante</p>
                 </div>
-                <div class="style-item">
-                    <span class="style-icon">✨</span>
+                <div class="style-card">
+                    <div class="style-icon">✨</div>
                     <h3>Ballroom</h3>
+                    <p>Clásico y sofisticado</p>
                 </div>
             </div>
         </div>
@@ -181,27 +262,57 @@
     <!-- Why Choose Us Section -->
     <section class="why-us">
         <div class="container">
-            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="section-header">
+                <span class="section-tag">¿Por Qué Elegirnos?</span>
+                <h2>Diferenciadores Únicos</h2>
+            </div>
+            
             <div class="why-grid">
                 <div class="why-item">
-                    <div class="why-number">01</div>
+                    <div class="why-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
                     <h3>Instructores Certificados</h3>
                     <p>Profesionales con años de experiencia y certificaciones internacionales</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-number">02</div>
+                    <div class="why-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
                     <h3>Experiencia en Hoteles</h3>
                     <p>Entendemos las necesidades específicas del sector hotelero</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-number">03</div>
-                    <h3>Personalización</h3>
+                    <div class="why-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Personalización Total</h3>
                     <p>Adaptamos cada clase a las preferencias de sus huéspedes</p>
                 </div>
                 <div class="why-item">
-                    <div class="why-number">04</div>
-                    <h3>Flexibilidad</h3>
+                    <div class="why-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexibilidad Horaria</h3>
                     <p>Horarios y formatos que se ajustan a su operación hotelera</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para Transformar la Experiencia de sus Huéspedes?</h2>
+                <p>Contáctenos hoy y descubra cómo podemos elevar el nivel de su hotel</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/1234567890" class="cta-button large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    </a>
+                    <a href="#contacto" class="cta-button outline large">
+                        <i class="fas fa-envelope"></i> Enviar Mensaje
+                    </a>
                 </div>
             </div>
         </div>
@@ -210,49 +321,66 @@
     <!-- Contact Section -->
     <section id="contacto" class="contact">
         <div class="container">
-            <h2>Contáctenos</h2>
-            <p class="section-subtitle">Estamos listos para transformar la experiencia de sus huéspedes</p>
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2>Contáctenos</h2>
+                <p>Estamos listos para transformar la experiencia de sus huéspedes</p>
+            </div>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <div class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <div>
-                            <p>WhatsApp</p>
-                            <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">+1 234 567 8900</a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
                         </div>
+                        <h3>WhatsApp</h3>
+                        <p>+1 234 567 8900</p>
+                        <a href="https://wa.me/1234567890" class="contact-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Iniciar Chat
+                        </a>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <p>Email</p>
-                            <a href="mailto:info@bailehoteles.com">info@bailehoteles.com</a>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
+                        <h3>Email</h3>
+                        <p>info@bailehoteles.com</p>
+                        <a href="mailto:info@bailehoteles.com" class="contact-button">
+                            <i class="fas fa-envelope"></i> Enviar Email
+                        </a>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🌐</span>
-                        <div>
-                            <p>Servicio disponible en</p>
-                            <p>Hoteles de toda la región</p>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
+                        <h3>Cobertura</h3>
+                        <p>Hoteles de toda la región</p>
+                        <a href="https://wa.me/1234567890" class="contact-button" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </a>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Solicitar Cotización</h3>
+                    <h3>Solicitar Cotización Rápida</h3>
                     <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Nombre del Hotel" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nombre del Hotel" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Nombre de Contacto" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Nombre de Contacto" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Teléfono / WhatsApp" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" placeholder="Teléfono / WhatsApp" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
                         </div>
                         <div class="form-group">
                             <select required>
@@ -260,15 +388,18 @@
                                 <option value="clases-individuales">Clases Individuales</option>
                                 <option value="clases-grupales">Clases Grupales</option>
                                 <option value="workshops">Workshops</option>
-                                <option value="programas-semanales">Programas Semanales</option>
+                                <option value="programas-corporativos">Programas Corporativos</option>
                                 <option value="shows">Shows en Vivo</option>
+                                <option value="eventos-especiales">Eventos Especiales</option>
                                 <option value="otro">Otro</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Mensaje adicional" rows="4"></textarea>
+                            <textarea placeholder="Cuéntenos sobre su evento o necesidad..." rows="4"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Enviar por WhatsApp</button>
+                        <button type="submit" class="submit-button">
+                            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
@@ -280,35 +411,49 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Clases de Baile para Hoteles</h3>
-                    <p>Transformando experiencias a través del baile</p>
+                    <h3>Baile <span class="logo-accent">Pro</span></h3>
+                    <p>Transformando experiencias hoteleras a través del baile desde 2010</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#modalidades">Modalidades</a></li>
+                        <li><a href="#galeria">Galería</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Clases Principiantes</a></li>
+                        <li><a href="#">Clases Grupales</a></li>
+                        <li><a href="#">Workshops</a></li>
+                        <li><a href="#">Shows en Vivo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
                     <h3>Horario de Atención</h3>
-                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-                    <p>Sábados: 10:00 AM - 4:00 PM</p>
+                    <p><i class="far fa-clock"></i> Lun-Vie: 9:00 AM - 6:00 PM</p>
+                    <p><i class="far fa-clock"></i> Sáb: 10:00 AM - 4:00 PM</p>
+                    <p><i class="far fa-clock"></i> Dom: Cerrado</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Clases de Baile para Hoteles. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Baile Pro. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
-        <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2C8.268 2 2 8.268 2 16c0 2.488.656 4.824 1.8 6.856L2.076 29.8l7.008-1.712C11.048 29.264 13.464 30 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5c-2.268 0-4.432-.608-6.336-1.752l-.456-.272-4.728 1.16 1.264-4.608-.3-.472C4.632 20.648 4 18.376 4 16c0-6.616 5.384-12 12-12s12 5.384 12 12-5.384 12-12 12zm6.592-8.992c-.36-.18-2.128-1.052-2.456-1.172-.328-.12-.568-.18-.808.18-.24.36-.928 1.172-1.136 1.412-.208.24-.416.272-.776.092-1.152-.576-2.4-1.072-3.728-2.856-.28-.376.28-.35.8-1.156.09-.18.045-.336-.045-.516-.09-.18-.808-1.952-1.108-2.672-.292-.704-.588-.608-.808-.62-.208-.012-.448-.012-.688-.012-.24 0-.632.09-.964.448-.332.36-1.268 1.236-1.268 3.012 0 1.776 1.292 3.492 1.472 3.732.18.24 2.54 3.876 6.156 5.436 2.28.984 2.744.788 3.244.736.5-.052 2.128-.868 2.428-1.708.3-.84.3-1.56.21-1.708-.09-.148-.33-.236-.69-.416z"/>
-        </svg>
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">¡Contáctanos!</span>
     </a>
 
     <script src="script.js"></script>

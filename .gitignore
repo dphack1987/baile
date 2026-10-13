@@ -11,8 +11,8 @@ ENV/
 
 # PDF y archivos temporales
 *.pdf
-page_*.png
-extract_pdf.py
+extract_*.py
+generate_*.py
 
 # Sistema
 .DS_Store

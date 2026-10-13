@@ -1,3 +1,24 @@
+// Music Player
+const musicToggle = document.getElementById('musicToggle');
+const backgroundMusic = document.getElementById('backgroundMusic');
+let isPlaying = false;
+
+musicToggle.addEventListener('click', () => {
+    if (isPlaying) {
+        backgroundMusic.pause();
+        musicToggle.classList.remove('playing');
+        musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+    } else {
+        backgroundMusic.play();
+        musicToggle.classList.add('playing');
+        musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+    }
+    isPlaying = !isPlaying;
+});
+
+// Set initial volume
+backgroundMusic.volume = 0.3;
+
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -94,9 +115,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+        header.classList.add('scrolled');
     } else {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        header.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
@@ -111,16 +132,116 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Observe all service cards and modality cards
-document.querySelectorAll('.service-card, .modality-card, .style-item, .why-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+// Observe all service cards, gallery items, and other elements
+document.querySelectorAll('.service-card, .gallery-item, .style-card, .why-item, .contact-card').forEach(el => {
+    el.classList.add('animate-on-scroll');
     observer.observe(el);
 });
+
+// Counter animation for stats
+const animateCounter = (element, target, duration = 2000) => {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start).toLocaleString();
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target.toLocaleString();
+        }
+    };
+    
+    updateCounter();
+};
+
+// Observe stats section
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const text = stat.textContent;
+                if (text.includes('K')) {
+                    const num = parseInt(text);
+                    animateCounter(stat, num * 1000);
+                    setTimeout(() => {
+                        stat.textContent = text;
+                    }, 2000);
+                } else if (text.includes('%')) {
+                    const num = parseInt(text);
+                    animateCounter(stat, num);
+                    setTimeout(() => {
+                        stat.textContent = text;
+                    }, 2000);
+                } else if (text.includes('+')) {
+                    const num = parseInt(text);
+                    animateCounter(stat, num);
+                    setTimeout(() => {
+                        stat.textContent = text;
+                    }, 2000);
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) {
+    statsObserver.observe(heroStats);
+}
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroBg = document.querySelector('.hero-bg');
+    if (heroBg && scrolled < window.innerHeight) {
+        heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
+// Add hover effect to service cards
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Gallery image lazy loading optimization
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Prevent music autoplay issues
+document.addEventListener('click', () => {
+    if (!isPlaying && backgroundMusic.paused) {
+        // Try to play music on first user interaction
+        // musicToggle.click();
+    }
+}, { once: true });
+
+console.log('Portfolio loaded successfully! 🎭💃');
