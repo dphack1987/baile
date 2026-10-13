@@ -58,32 +58,48 @@ npx http-server
 
 Luego abra `http://localhost:8000` en su navegador.
 
-## 🌐 Despliegue
+## 🌐 Despliegue en Vercel (Recomendado)
 
-### Opción 1: GitHub Pages (Recomendado - Gratis)
+### Pasos para desplegar en Vercel:
 
-1. Suba este repositorio a GitHub
-2. Vaya a Settings > Pages
-3. En "Source", seleccione la rama `main`
-4. Haga clic en Save
-5. Su sitio estará disponible en: `https://dphack1987.github.io/baile/`
+1. **Crear cuenta en Vercel**
+   - Vaya a [vercel.com](https://vercel.com)
+   - Regístrese con su cuenta de GitHub
 
-### Opción 2: Netlify (Gratis)
+2. **Importar el repositorio**
+   - Haga clic en "Add New Project"
+   - Seleccione el repositorio `dphack1987/baile`
+   - Haga clic en "Import"
 
+3. **Configurar el proyecto**
+   - Framework Preset: "Other"
+   - Root Directory: `./`
+   - Build Command: (dejar vacío)
+   - Output Directory: `./`
+
+4. **Desplegar**
+   - Haga clic en "Deploy"
+   - Espere unos segundos
+   - ¡Su sitio estará en línea!
+
+5. **Personalizar dominio (opcional)**
+   - Vaya a Settings > Domains
+   - Puede usar un dominio personalizado o el dominio gratuito de Vercel
+
+**URL del sitio:** `https://baile.vercel.app` (o el dominio que Vercel asigne)
+
+### Otras opciones de despliegue:
+
+**GitHub Pages:**
+1. Vaya al repositorio en GitHub
+2. Settings > Pages
+3. Source: `main` branch
+4. URL: `https://dphack1987.github.io/baile/`
+
+**Netlify:**
 1. Vaya a [netlify.com](https://netlify.com)
-2. Arrastre la carpeta del proyecto al área de "Sites"
-3. Espere unos segundos y su sitio estará en línea
-
-### Opción 3: Vercel (Gratis)
-
-1. Vaya a [vercel.com](https://vercel.com)
-2. Conecte su cuenta de GitHub
-3. Importe este repositorio
-4. Haga clic en Deploy
-
-### Opción 4: Servidor tradicional
-
-Suba los archivos (`index.html`, `styles.css`, `script.js`) a cualquier servidor web tradicional (cPanel, Plesk, etc.).
+2. Arrastre la carpeta del proyecto
+3. Listo
 
 ## 📱 Compartir el Portafolio
 
