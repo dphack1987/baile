@@ -6,15 +6,16 @@
 }
 
 :root {
-    --primary-color: #D4AF37;
-    --primary-dark: #B8960C;
-    --secondary-color: #1a1a2e;
-    --accent-color: #16213e;
+    --primary-color: #E63946;
+    --primary-dark: #C1121F;
+    --secondary-color: #F4A261;
+    --accent-color: #FFB703;
     --text-color: #333;
     --light-text: #f5f5f5;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #D4AF37 0%, #f4e4bc 100%);
-    --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --gradient: linear-gradient(135deg, #E63946 0%, #F4A261 50%, #FFB703 100%);
+    --gradient-dark: linear-gradient(135deg, #1D3557 0%, #457B9D 50%, #A8DADC 100%);
+    --gradient-hero: linear-gradient(135deg, #E63946 0%, #F4A261 30%, #FFB703 70%, #457B9D 100%);
     --whatsapp-green: #25D366;
     --whatsapp-dark: #128C7E;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
@@ -55,15 +56,15 @@ h1, h2, h3 {
 }
 
 .music-toggle {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: var(--primary-color);
-    border: none;
+    background: var(--gradient);
+    border: 3px solid var(--white);
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
     transition: var(--transition);
     display: flex;
     align-items: center;
@@ -194,7 +195,7 @@ h1, h2, h3 {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: var(--gradient-dark);
+    background: var(--gradient-hero);
 }
 
 .hero-bg {
@@ -203,9 +204,9 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1"/></svg>');
-    background-size: 300px;
-    animation: float 30s infinite linear;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" font-size="40" text-anchor="middle" fill="rgba(255,255,255,0.1)">💃</text></svg>'), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" font-size="40" text-anchor="middle" fill="rgba(255,255,255,0.08)">🕺</text></svg>');
+    background-size: 200px, 200px;
+    animation: float 20s infinite linear;
 }
 
 @keyframes float {
@@ -234,14 +235,15 @@ h1, h2, h3 {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(212, 175, 55, 0.2);
-    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--white);
+    backdrop-filter: blur(10px);
 }
 
 .hero h1 {
@@ -333,8 +335,9 @@ h1, h2, h3 {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .stat-label {
@@ -384,12 +387,13 @@ h1, h2, h3 {
 .section-tag {
     display: inline-block;
     background: var(--gradient);
-    color: var(--secondary-color);
+    color: var(--white);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .section-header h2 {
@@ -435,8 +439,9 @@ h1, h2, h3 {
 }
 
 .service-card.featured {
-    border: 2px solid var(--primary-color);
-    background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(255,255,255,1) 100%);
+    border: 3px solid var(--primary-color);
+    background: linear-gradient(135deg, rgba(230,57,70,0.1) 0%, rgba(244,162,97,0.05) 100%);
+    transform: scale(1.02);
 }
 
 .featured-badge {
@@ -744,7 +749,8 @@ h1, h2, h3 {
 .why-icon {
     width: 80px;
     height: 80px;
-    background: var(--primary-color);
+    background: var(--gradient);
+    border: 3px solid var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -752,6 +758,7 @@ h1, h2, h3 {
     margin: 0 auto 1.5rem;
     font-size: 2rem;
     color: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
 .why-item h3 {
@@ -932,7 +939,7 @@ h1, h2, h3 {
 
 /* Footer */
 .footer {
-    background: var(--secondary-color);
+    background: var(--gradient-dark);
     color: var(--white);
     padding: 4rem 0 1rem;
 }
@@ -1010,9 +1017,10 @@ h1, h2, h3 {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     background: var(--whatsapp-green);
+    border: 4px solid var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1020,8 +1028,15 @@ h1, h2, h3 {
     box-shadow: var(--shadow-lg);
     z-index: 1000;
     transition: var(--transition);
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--white);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
 }
 
 .whatsapp-float:hover {
