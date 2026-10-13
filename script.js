@@ -58,8 +58,8 @@ contactForm.addEventListener('submit', (e) => {
     // Encode message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // TODO: Replace with actual WhatsApp number
-    const whatsappNumber = '1234567890'; // Replace with actual number
+    // IMPORTANT: Replace with your actual WhatsApp number (including country code, no + symbol)
+    const whatsappNumber = '1234567890'; // Example: 521234567890
     
     // Open WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
