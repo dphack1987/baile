@@ -27,3 +27,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Images documentation (mantener el archivo pero ignorar si se desea)
+# images/INVENTORY.md

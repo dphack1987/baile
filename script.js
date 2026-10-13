@@ -57,30 +57,28 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Get form values
-    const hotelName = contactForm.querySelector('input[placeholder="Nombre del Hotel"]').value;
-    const contactName = contactForm.querySelector('input[placeholder="Nombre de Contacto"]').value;
+    const contactName = contactForm.querySelector('input[placeholder="Tu Nombre"]').value;
     const phone = contactForm.querySelector('input[placeholder="Teléfono / WhatsApp"]').value;
     const email = contactForm.querySelector('input[placeholder="Email"]').value;
     const serviceType = contactForm.querySelector('select').value;
     const message = contactForm.querySelector('textarea').value;
-    
-    // Create WhatsApp message
-    const whatsappMessage = `¡Hola! Me gustaría solicitar información sobre clases de baile para mi hotel.
 
-🏨 *Hotel:* ${hotelName}
-👤 *Contacto:* ${contactName}
+    // Create WhatsApp message
+    const whatsappMessage = `¡Hola! Me gustaría solicitar información sobre clases de baile.
+
+👤 *Nombre:* ${contactName}
 📱 *Teléfono:* ${phone}
 📧 *Email:* ${email}
-🎭 *Tipo de Servicio:* ${serviceType}
+🎭 *Tipo de Clase:* ${serviceType}
 💬 *Mensaje:* ${message}
 
-¡Espero su respuesta!`;
+¡Espero tu respuesta!`;
     
     // Encode message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // IMPORTANT: Replace with your actual WhatsApp number (including country code, no + symbol)
-    const whatsappNumber = '1234567890'; // Example: 521234567890
+    const whatsappNumber = '573003256451'; // Example: 521234567890
     
     // Open WhatsApp
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

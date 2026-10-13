@@ -1,6 +1,6 @@
-# Portafolio de Clases de Baile para Hoteles
+# Portafolio de Clases de Baile - Nicolás Garzón
 
-Portafolio online profesional e inmersivo para servicios de clases de baile dirigidos a hoteles. Diseño moderno, responsive, con música de fondo y integración directa de WhatsApp para contacto.
+Portafolio online profesional e inmersivo para servicios de clases de baile. Diseño moderno, responsive, con música de fondo y integración directa de WhatsApp para contacto.
 
 ## 🎯 Características
 
@@ -34,26 +34,16 @@ baile/
 
 ## 🚀 Cómo Usar
 
-### 1. Configurar el número de WhatsApp
+### 1. Información de Contacto Configurada
 
-Antes de desplegar, debe configurar su número de WhatsApp en múltiples lugares:
+El portafolio ya está configurado con la información real:
 
-**En `index.html` (3 lugares):**
-- Línea 34: Header CTA button
-- Líneas 101, 113, 124, 135, 146, 157: Service cards
-- Líneas 179, 189, 199, 209: Gallery items
-- Línea 228: Contact card
-- Línea 242: Contact card
-- Línea 256: Contact card
-- Línea 340: Floating WhatsApp button
+- **WhatsApp:** +57 300 325 6451
+- **Email:** nicolas.garzonmesa54@gmail.com
+- **Nombre:** Nicolás Garzón Mesa
+- **Profesión:** Licenciado en Educación física, recreación y deportes
 
-Busque: `https://wa.me/1234567890`
-Reemplace `1234567890` con su número (incluyendo código de país, sin el símbolo +)
-Ejemplo: `https://wa.me/521234567890`
-
-**En `script.js`:**
-- Línea 83: `const whatsappNumber = '1234567890';`
-Reemplace con su número (incluyendo código de país, sin el símbolo +)
+El número de WhatsApp ya está configurado en todos los lugares necesarios del código.
 
 ### 2. Configurar la música de fondo (opcional)
 
@@ -62,13 +52,14 @@ El portafolio incluye música de fondo. Puede cambiarla editando `index.html`:
 
 Reemplace la URL con su propia música o use una fuente diferente.
 
-### 3. Actualizar información de contacto
+### 3. Precios Configurados
 
-En `index.html`, actualice:
-- Email: `info@bailehoteles.com` (línea 230)
-- Teléfono en la sección de contacto
-- Estadísticas del hero (líneas 65-75)
-- Cualquier otra información específica
+Los precios ya están actualizados según el portafolio original:
+
+- **Clases Grupales:** 60.000 COP (semanal) / 80.000 COP (única)
+- **Clases Personalizadas:** 100.000 COP (semanal) / 120.000 COP (única)
+- **Rumbaterapia:** 60.000 COP (semanal) / 80.000 COP (única)
+- **Comisión Hoteles:** 20%
 
 ### 4. Ver localmente
 
