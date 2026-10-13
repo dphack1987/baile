@@ -1,14 +1,18 @@
 # Portafolio de Clases de Baile para Hoteles
 
-Portafolio online profesional para servicios de clases de baile dirigidos a hoteles. Diseño moderno, responsive y con integración directa de WhatsApp para contacto.
+Portafolio online profesional e inmersivo para servicios de clases de baile dirigidos a hoteles. Diseño moderno, responsive, con música de fondo y integración directa de WhatsApp para contacto.
 
 ## 🎯 Características
 
-- ✨ Diseño elegante y profesional
+- ✨ Diseño premium y moderno con UX mejorada
+- 🎵 **Música de fondo** con control de reproducción
+- 📸 **Galería de imágenes** del portafolio original
 - 📱 Totalmente responsive (móvil, tablet, desktop)
-- 💬 Contacto directo por WhatsApp
+- 💬 **Múltiples botones de WhatsApp** para contacto directo
 - 🎭 Secciones organizadas de servicios
-- 🌟 Animaciones suaves y modernas
+- 🌟 Animaciones suaves, parallax y efectos de scroll
+- 📊 Estadísticas animadas en el hero
+- 🎨 Tipografía profesional con Font Awesome
 - 🚀 Fácil de desplegar y compartir
 
 ## 📁 Estructura del Proyecto
@@ -16,8 +20,15 @@ Portafolio online profesional para servicios de clases de baile dirigidos a hote
 ```
 baile/
 ├── index.html          # Página principal
-├── styles.css          # Estilos CSS
+├── styles.css          # Estilos CSS modernos
 ├── script.js           # Funcionalidad JavaScript
+├── vercel.json         # Configuración de Vercel
+├── images/             # Galería de imágenes
+│   ├── page_1.png
+│   ├── page_2.png
+│   ├── page_3.png
+│   └── page_4.png
+├── .gitignore          # Archivos a ignorar
 └── README.md           # Este archivo
 ```
 
@@ -25,25 +36,41 @@ baile/
 
 ### 1. Configurar el número de WhatsApp
 
-Antes de desplegar, debe configurar su número de WhatsApp en dos lugares:
+Antes de desplegar, debe configurar su número de WhatsApp en múltiples lugares:
 
-**En `index.html`:**
-- Busque: `https://wa.me/TUNUMERO`
-- Reemplace `TUNUMERO` con su número (incluyendo código de país, sin el símbolo +)
-- Ejemplo: `https://wa.me/1234567890`
+**En `index.html` (3 lugares):**
+- Línea 34: Header CTA button
+- Líneas 101, 113, 124, 135, 146, 157: Service cards
+- Líneas 179, 189, 199, 209: Gallery items
+- Línea 228: Contact card
+- Línea 242: Contact card
+- Línea 256: Contact card
+- Línea 340: Floating WhatsApp button
+
+Busque: `https://wa.me/1234567890`
+Reemplace `1234567890` con su número (incluyendo código de país, sin el símbolo +)
+Ejemplo: `https://wa.me/521234567890`
 
 **En `script.js`:**
-- Busque: `const whatsappNumber = '1234567890';`
-- Reemplace con su número (incluyendo código de país, sin el símbolo +)
+- Línea 83: `const whatsappNumber = '1234567890';`
+Reemplace con su número (incluyendo código de país, sin el símbolo +)
 
-### 2. Actualizar información de contacto
+### 2. Configurar la música de fondo (opcional)
+
+El portafolio incluye música de fondo. Puede cambiarla editando `index.html`:
+- Línea 18: `<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">`
+
+Reemplace la URL con su propia música o use una fuente diferente.
+
+### 3. Actualizar información de contacto
 
 En `index.html`, actualice:
-- Email: `info@bailehoteles.com`
+- Email: `info@bailehoteles.com` (línea 230)
 - Teléfono en la sección de contacto
+- Estadísticas del hero (líneas 65-75)
 - Cualquier otra información específica
 
-### 3. Ver localmente
+### 4. Ver localmente
 
 Simplemente abra el archivo `index.html` en su navegador web.
 
@@ -159,30 +186,60 @@ El formulario de contacto envía el mensaje directamente a WhatsApp con toda la 
 
 ## 📄 Secciones del Portafolio
 
-1. **Hero**: Sección principal con llamada a la acción
-2. **Servicios**: 6 tipos de servicios ofrecidos
-3. **Modalidades**: 4 formatos de clases
-4. **Estilos de Baile**: 6 estilos disponibles
-5. **Por Qué Elegirnos**: 4 razones clave
-6. **Contacto**: Formulario e información de contacto
-7. **Footer**: Información adicional y enlaces
+1. **Hero**: Sección principal inmersiva con estadísticas animadas y CTAs
+2. **Servicios**: 6 tipos de servicios con botones directos de WhatsApp
+3. **Galería**: Imágenes del portafolio original con efectos hover
+4. **Estilos de Baile**: 6 estilos disponibles con diseño interactivo
+5. **Por Qué Elegirnos**: 4 diferenciadores clave
+6. **CTA Section**: Llamada a la acción destacada
+7. **Contacto**: Formulario e información de contacto con múltiples opciones
+8. **Footer**: Información adicional, enlaces y redes sociales
+
+## 🎵 Características Inmersivas
+
+### Música de Fondo
+- Botón flotante para activar/desactivar música
+- Animación de pulso cuando está reproduciendo
+- Volumen inicial bajo (30%) para no ser intrusivo
+- Se puede personalizar fácilmente
+
+### Animaciones y Efectos
+- **Parallax**: Efecto de profundidad en el hero
+- **Scroll Animations**: Elementos aparecen al hacer scroll
+- **Counter Animation**: Estadísticas animadas
+- **Hover Effects**: Tarjetas con efectos al pasar el mouse
+- **Smooth Scroll**: Navegación suave entre secciones
+
+### WhatsApp Integration
+- **Botón flotante** siempre visible
+- **Botones en cada servicio** con mensaje predefinido
+- **Header CTA** para contacto rápido
+- **Galería** con botones de contacto
+- **Formulario** que envía directamente a WhatsApp
 
 ## 🌟 Características de UX/UI
 
-- Navegación fija con efecto de scroll
-- Menú hamburguesa para móviles
-- Animaciones suaves al hacer scroll
-- Botón flotante de WhatsApp
-- Formulario con validación
-- Diseño responsivo
-- Tipografía profesional (Playfair Display + Poppins)
+- Navegación fija con efecto de scroll y backdrop blur
+- Menú hamburguesa animado para móviles
+- Animaciones suaves al hacer scroll (fade-in, slide-up)
+- Botón flotante de WhatsApp con tooltip
+- Formulario con validación y envío a WhatsApp
+- Diseño completamente responsive
+- Tipografía premium (Playfair Display + Poppins)
+- Iconos de Font Awesome
+- Gradientes y sombras modernas
+- Efectos hover en tarjetas y botones
+- Indicador de scroll animado
 
 ## 📝 Notas
 
 - El portafolio está listo para usar, solo necesita configurar el número de WhatsApp
-- Todas las animaciones son sutiles y no afectan el rendimiento
-- El código está optimizado para carga rápida
+- Todas las animaciones son optimizadas y no afectan el rendimiento
+- El código está optimizado para carga rápida con lazy loading de imágenes
 - Compatible con todos los navegadores modernos
+- La música de fondo requiere interacción del usuario para reproducirse (política de navegadores)
+- Las imágenes del portafolio original están en la carpeta `images/`
+- Se recomienda usar música libre de derechos para evitar problemas de copyright
 
 ## 🤝 Soporte
 
