@@ -82,6 +82,23 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Video Promocional</span>
+                <h2>🎬 Conoce Mis Clases</h2>
+                <p>Mira cómo disfrutamos aprendiendo a bailar</p>
+            </div>
+            <div class="video-container">
+                <video controls poster="images/classes/grupos.jpeg">
+                    <source src="videos/promo.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
@@ -250,74 +267,36 @@
             
             <div class="classes-grid">
                 <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Clase de Principiantes</span>
-                    </div>
+                    <img src="images/classes/baile1.jpeg" alt="Clase de Baile" loading="lazy">
                     <div class="class-info">
-                        <h3>Clase de Principiantes</h3>
-                        <p>Huéspedes aprendiendo los primeros pasos</p>
+                        <h3>Clase de Baile</h3>
+                        <p>Aprendiendo los primeros pasos</p>
                     </div>
                 </div>
-                
+
                 <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Clase Grupal</span>
+                    <img src="images/classes/clase2.jpeg" alt="Clase Individual" loading="lazy">
+                    <div class="class-info">
+                        <h3>Clase Individual</h3>
+                        <p>Atención personalizada</p>
                     </div>
+                </div>
+
+                <div class="class-item">
+                    <img src="images/classes/grupos.jpeg" alt="Clase Grupal" loading="lazy">
                     <div class="class-info">
                         <h3>Clase Grupal</h3>
-                        <p>Grupos pequeños disfrutando del baile</p>
+                        <p>Grupos disfrutando del baile</p>
                     </div>
                 </div>
-                
+
                 <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Evento Corporativo</span>
-                    </div>
+                    <img src="images/classes/rumbaterapia.jpeg" alt="Rumbaterapia" loading="lazy">
                     <div class="class-info">
-                        <h3>Evento Corporativo</h3>
-                        <p>Team building con baile</p>
+                        <h3>Rumbaterapia</h3>
+                        <p>¡Diviértete y muévete!</p>
                     </div>
                 </div>
-                
-                <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Boda en Hotel</span>
-                    </div>
-                    <div class="class-info">
-                        <h3>Boda en Hotel</h3>
-                        <p>Clase especial para novios</p>
-                    </div>
-                </div>
-                
-                <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Clase de Salsa</span>
-                    </div>
-                    <div class="class-info">
-                        <h3>Clase de Salsa</h3>
-                        <p>Ritmo latino en acción</p>
-                    </div>
-                </div>
-                
-                <div class="class-item">
-                    <div class="class-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Show en Vivo</span>
-                    </div>
-                    <div class="class-info">
-                        <h3>Show en Vivo</h3>
-                        <p>Presentación profesional</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-note">
-                <p><i class="fas fa-info-circle"></i> Estas son plantillas para agregar fotos reales. Coloque sus imágenes en la carpeta <code>images/classes/</code> y actualice el código.</p>
             </div>
         </div>
     </section>
@@ -351,6 +330,30 @@
                     <div class="style-icon">🎉</div>
                     <h3>Rumbaterapia</h3>
                     <p>¡Diviértete y muévete!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tu Instructor</span>
+                <h2>👨‍🏫 Nicolás Garzón Mesa</h2>
+                <p>Licenciado en Educación física, recreación y deportes</p>
+            </div>
+            <div class="instructor-content">
+                <div class="instructor-image">
+                    <img src="images/instructors/nicolas.jpeg" alt="Nicolás Garzón" loading="lazy">
+                </div>
+                <div class="instructor-info">
+                    <h3>Pasión por el Baile</h3>
+                    <p>Con años de experiencia enseñando salsa, bachata, merengue y rumbaterapia, me dedico a compartir mi pasión por el baile con personas de todas las edades y niveles.</p>
+                    <p>Mi objetivo es que cada clase sea una experiencia divertida, donde puedas liberar el estrés, mejorar tu coordinación y, sobre todo, disfrutar al máximo.</p>
+                    <a href="https://wa.me/573003256451" class="cta-button primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> ¡Agenda tu Clase!
+                    </a>
                 </div>
             </div>
         </div>
@@ -436,7 +439,7 @@
                             <i class="fab fa-whatsapp"></i> Iniciar Chat
                         </a>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -447,16 +450,14 @@
                             <i class="fas fa-envelope"></i> Enviar Email
                         </a>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-qrcode"></i>
                         </div>
-                        <h3>Cobertura</h3>
-                        <p>Hoteles de toda la región</p>
-                        <a href="https://wa.me/573003256451" class="contact-button" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Consultar
-                        </a>
+                        <h3>Escanea el QR</h3>
+                        <p>Contáctame directamente</p>
+                        <img src="images/qr.jpeg" alt="QR WhatsApp" class="qr-image">
                     </div>
                 </div>
                 
