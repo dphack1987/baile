@@ -568,6 +568,15 @@ function changeLanguage(lang) {
         }
     });
 
+    // Update placeholders
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('placeholder', translations[lang][key]);
+        }
+    });
+
     // Update lang attribute on html
     document.documentElement.lang = lang;
 
@@ -580,11 +589,20 @@ function initializeLanguage() {
     const savedLang = localStorage.getItem('preferredLanguage');
     if (savedLang && translations[savedLang]) {
         changeLanguage(savedLang);
+        // Update dropdown
+        const select = document.getElementById('languageSelect');
+        if (select) {
+            select.value = savedLang;
+        }
     } else {
         // Detect browser language
         const browserLang = navigator.language.substring(0, 2);
         if (translations[browserLang]) {
             changeLanguage(browserLang);
+            const select = document.getElementById('languageSelect');
+            if (select) {
+                select.value = browserLang;
+            }
         }
     }
 }
