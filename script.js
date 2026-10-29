@@ -23,6 +23,27 @@ const translations = {
         'video-title': '🎬 Conoce Mis Clases',
         'video-subtitle': 'Mira cómo disfrutamos aprendiendo a bailar',
 
+        // Flexibilidad Section
+        'flexibilidad-tag': 'Flexibilidad',
+        'flexibilidad-title': '🕐 Tu Primera Clase es Cuando Tú Quieras',
+        'flexibilidad-subtitle': 'Adapta las clases a tu horario, no al revés',
+        'flexibilidad-heading': 'Horarios Personalizados',
+        'flexibilidad-desc-1': 'Entiendo que cada persona tiene compromisos diferentes. Por eso, ofrezco horarios flexibles que se adaptan a tu disponibilidad.',
+        'flexibilidad-desc-2': 'Ya sea temprano en la mañana, tarde en la noche, o fines de semana, podemos encontrar el momento perfecto para tu primera clase.',
+        'flexibilidad-cta': 'Agendar Mi Primera Clase',
+
+        // Virtual Section
+        'virtual-tag': 'Clases Virtuales',
+        'virtual-title': '💻 Clases Online desde Donde Estés',
+        'virtual-subtitle': 'Aprende a bailar desde la comodidad de tu hogar',
+        'virtual-heading': 'Baile sin Límites',
+        'virtual-desc-1': 'Mis clases virtuales te permiten aprender salsa, bachata, merengue y rumbaterapia desde cualquier lugar. Solo necesitas un dispositivo con internet y ganas de bailar.',
+        'virtual-desc-2': 'A través de videollamada, te guiaré paso a paso con instrucciones claras y personalizadas. ¡Es como estar en clase presencial!',
+        'virtual-feature-1': 'Instrucción personalizada en vivo',
+        'virtual-feature-2': 'Material de apoyo incluido',
+        'virtual-feature-3': 'Grabación de la clase disponible',
+        'virtual-cta': 'Probar Clase Virtual',
+
         // Services
         'services-tag': 'Nuestros Servicios',
         'services-title': '💃 Tipos de Clases 🕺',
@@ -51,7 +72,7 @@ const translations = {
         // Gallery
         'gallery-tag': 'Nuestro Portafolio',
         'gallery-title': '📸 Galería de Experiencias',
-        'gallery-subtitle': 'Descubre la magia de nuestras clases a través de imágenes',
+        'gallery-subtitle': 'Descubre la magia de nuestras clases a través de imágenes y videos',
         'gallery-item-1': 'Introducción',
         'gallery-item-2': 'Servicios',
         'gallery-item-3': 'Modalidades',
@@ -161,6 +182,27 @@ const translations = {
         'video-title': '🎬 Discover My Classes',
         'video-subtitle': 'Watch how we enjoy learning to dance',
 
+        // Flexibilidad Section
+        'flexibilidad-tag': 'Flexibility',
+        'flexibilidad-title': '🕐 Your First Class is When You Want',
+        'flexibilidad-subtitle': 'Adapt classes to your schedule, not the other way around',
+        'flexibilidad-heading': 'Personalized Schedules',
+        'flexibilidad-desc-1': 'I understand that each person has different commitments. That\'s why I offer flexible schedules that adapt to your availability.',
+        'flexibilidad-desc-2': 'Whether early in the morning, late at night, or on weekends, we can find the perfect time for your first class.',
+        'flexibilidad-cta': 'Schedule My First Class',
+
+        // Virtual Section
+        'virtual-tag': 'Virtual Classes',
+        'virtual-title': '💻 Online Classes from Anywhere',
+        'virtual-subtitle': 'Learn to dance from the comfort of your home',
+        'virtual-heading': 'Dance Without Limits',
+        'virtual-desc-1': 'My virtual classes allow you to learn salsa, bachata, merengue and rumbaterapia from anywhere. You just need a device with internet and the desire to dance.',
+        'virtual-desc-2': 'Through video call, I will guide you step by step with clear and personalized instructions. It\'s like being in an in-person class!',
+        'virtual-feature-1': 'Live personalized instruction',
+        'virtual-feature-2': 'Support material included',
+        'virtual-feature-3': 'Class recording available',
+        'virtual-cta': 'Try Virtual Class',
+
         // Services
         'services-tag': 'Our Services',
         'services-title': '💃 Types of Classes 🕺',
@@ -189,7 +231,7 @@ const translations = {
         // Gallery
         'gallery-tag': 'Our Portfolio',
         'gallery-title': '📸 Experience Gallery',
-        'gallery-subtitle': 'Discover the magic of our classes through images',
+        'gallery-subtitle': 'Discover the magic of our classes through images and videos',
         'gallery-item-1': 'Introduction',
         'gallery-item-2': 'Services',
         'gallery-item-3': 'Modalities',
@@ -299,6 +341,27 @@ const translations = {
         'video-title': '🎬 Découvrez Mes Cours',
         'video-subtitle': 'Regardez comment nous profitons en apprenant à danser',
 
+        // Flexibilidad Section
+        'flexibilidad-tag': 'Flexibilité',
+        'flexibilidad-title': '🕐 Votre Première Classe est Quand Vous Voulez',
+        'flexibilidad-subtitle': 'Adaptez les classes à votre horaire, pas l\'inverse',
+        'flexibilidad-heading': 'Horaires Personnalisés',
+        'flexibilidad-desc-1': 'Je comprends que chaque personne a des engagements différents. C\'est pourquoi j\'offre des horaires flexibles qui s\'adaptent à votre disponibilité.',
+        'flexibilidad-desc-2': 'Que ce soit tôt le matin, tard le soir, ou le week-end, nous pouvons trouver le moment parfait pour votre première classe.',
+        'flexibilidad-cta': 'Planifier Ma Première Classe',
+
+        // Virtual Section
+        'virtual-tag': 'Classes Virtuelles',
+        'virtual-title': '💻 Classes en Ligne de N\'importe Où',
+        'virtual-subtitle': 'Apprenez à danser depuis le confort de votre domicile',
+        'virtual-heading': 'Danse Sans Limites',
+        'virtual-desc-1': 'Mes classes virtuelles vous permettent d\'apprendre la salsa, la bachata, le merengue et la rumbaterapia de n\'importe où. Vous avez juste besoin d\'un appareil avec internet et l\'envie de danser.',
+        'virtual-desc-2': 'Par appel vidéo, je vous guiderai pas à pas avec des instructions claires et personnalisées. C\'est comme être en classe en présentiel!',
+        'virtual-feature-1': 'Instruction personnalisée en direct',
+        'virtual-feature-2': 'Matériel de support inclus',
+        'virtual-feature-3': 'Enregistrement de la classe disponible',
+        'virtual-cta': 'Essayer Classe Virtuelle',
+
         // Services
         'services-tag': 'Nos Services',
         'services-title': '💃 Types de Cours 🕺',
@@ -327,7 +390,7 @@ const translations = {
         // Gallery
         'gallery-tag': 'Notre Portfolio',
         'gallery-title': '📸 Galerie d\'Expériences',
-        'gallery-subtitle': 'Découvrez la magie de nos cours à travers les images',
+        'gallery-subtitle': 'Découvrez la magie de nos cours à travers les images et vidéos',
         'gallery-item-1': 'Introduction',
         'gallery-item-2': 'Services',
         'gallery-item-3': 'Modalités',
@@ -437,6 +500,27 @@ const translations = {
         'video-title': '🎬 Entdecken Sie Meine Kurse',
         'video-subtitle': 'Sehen Sie, wie wir beim Tanzenlernen Spaß haben',
 
+        // Flexibilidad Section
+        'flexibilidad-tag': 'Flexibilität',
+        'flexibilidad-title': '🕐 Ihr Erster Kurs ist Wann Sie Wollen',
+        'flexibilidad-subtitle': 'Passen Sie die Kurse Ihrem Zeitplan an, nicht umgekehrt',
+        'flexibilidad-heading': 'Personalisierte Zeitpläne',
+        'flexibilidad-desc-1': 'Ich verstehe, dass jede Person unterschiedliche Verpflichtungen hat. Deshalb biete ich flexible Zeitpläne an, die sich an Ihre Verfügbarkeit anpassen.',
+        'flexibilidad-desc-2': 'Egal ob früh am Morgen, spät am Abend oder am Wochenende, wir können den perfekten Zeitpunkt für Ihren ersten Kurs finden.',
+        'flexibilidad-cta': 'Meinen Ersten Kurs Planen',
+
+        // Virtual Section
+        'virtual-tag': 'Virtuelle Kurse',
+        'virtual-title': '💻 Online-Kurse von Überall',
+        'virtual-subtitle': 'Lernen Sie Tanzen aus dem Komfort Ihres Zuhauses',
+        'virtual-heading': 'Tanzen Ohne Grenzen',
+        'virtual-desc-1': 'Meine virtuellen Kurse ermöglichen es Ihnen, Salsa, Bachata, Merengue und Rumbaterapia von überall zu lernen. Sie benötigen nur ein Gerät mit Internet und den Wunsch zu tanzen.',
+        'virtual-desc-2': 'Per Videoanrufe führe ich Sie Schritt für Schritt mit klaren und personalisierten Anweisungen. Es ist wie ein Präsenzkurs!',
+        'virtual-feature-1': 'Live personalisierte Anweisung',
+        'virtual-feature-2': 'Unterstützungsmaterial enthalten',
+        'virtual-feature-3': 'Aufzeichnung des Kurses verfügbar',
+        'virtual-cta': 'Virtuellen Kurs Probieren',
+
         // Services
         'services-tag': 'Unsere Dienstleistungen',
         'services-title': '💃 Arten von Kursen 🕺',
@@ -465,7 +549,7 @@ const translations = {
         // Gallery
         'gallery-tag': 'Unser Portfolio',
         'gallery-title': '📸 Erlebnisgalerie',
-        'gallery-subtitle': 'Entdecken Sie die Magie unserer Kurse durch Bilder',
+        'gallery-subtitle': 'Entdecken Sie die Magie unserer Kurse durch Bilder und Videos',
         'gallery-item-1': 'Einführung',
         'gallery-item-2': 'Dienstleistungen',
         'gallery-item-3': 'Modalitäten',
@@ -812,6 +896,25 @@ window.addEventListener('scroll', () => {
     if (heroBg && scrolled < window.innerHeight) {
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
+});
+
+// Video gallery hover effect
+const videoItems = document.querySelectorAll('.video-item');
+videoItems.forEach(item => {
+    const video = item.querySelector('video');
+
+    item.addEventListener('mouseenter', () => {
+        if (video) {
+            video.play().catch(err => console.log('Video play error:', err));
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
 });
 
 // Add hover effect to service cards
