@@ -644,6 +644,14 @@ h1, h2, h3 {
     margin-top: 0.25rem;
 }
 
+.discount-note {
+    font-size: 0.8rem;
+    color: var(--whatsapp-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 .service-cta {
     display: inline-flex;
     align-items: center;
