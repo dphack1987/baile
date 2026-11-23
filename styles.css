@@ -526,84 +526,11 @@ h1, h2, h3 {
     color: var(--secondary-color);
 }
 
-.section-header p {
+.service-header p {
     color: #666;
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.pricing-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.toggle-label {
-    font-weight: 600;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 30px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: var(--primary-color);
-}
-
-input:checked + .slider:before {
-    transform: translateX(30px);
-}
-
-/* Pricing Toggle - Hide weekly by default */
-.price-weekly {
-    display: none;
-}
-
-/* When toggle is checked (weekly), hide hourly and show weekly */
-.services:has(.pricing-toggle.checked) .price-hourly {
-    display: none;
-}
-
-.services:has(.pricing-toggle.checked) .price-weekly {
-    display: block;
 }
 
 /* Video Section */

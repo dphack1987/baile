@@ -51,6 +51,9 @@ const translations = {
         'service-1-title': '🎓 Clases Principiantes',
         'service-1-desc': 'Aprendizaje desde cero. Clases introductorias perfectas para comenzar tu viaje en el baile.',
         'service-1-price': 'Clase Única',
+        'service-1b-title': '👥 Clases Grupales Principiantes',
+        'service-1b-desc': 'Clases abiertas al público para principiantes. Aprende en grupo y diviértete.',
+        'service-1b-price': 'Clase Semanal',
         'service-2-title': '⭐ Clases Personalizadas',
         'service-2-desc': 'Clases individuales o para parejas. Atención personalizada según tus necesidades.',
         'service-2-price': 'Por Hora',
@@ -65,10 +68,8 @@ const translations = {
         'service-5-desc': 'Trabajamos con hoteles y establecimientos con modelo de comisión.',
         'service-5-price': 'Comisión',
         'service-cta': 'Cotizar',
-        'discount-note': '¡20% de descuento en clases semanales continuas!',
+        'discount-note': '¡20% de descuento desde tu segunda clase!',
         'discount-weekly': '60.000 COP si es semanal',
-        'price-per-hour': 'Por Hora',
-        'price-weekly': 'Semanal',
 
         // Gallery
         'gallery-tag': 'Nuestro Portafolio',
@@ -211,6 +212,9 @@ const translations = {
         'service-1-title': '🎓 Beginner Classes',
         'service-1-desc': 'Learning from scratch. Introductory classes perfect to start your dance journey.',
         'service-1-price': 'Single Class',
+        'service-1b-title': '👥 Beginner Group Classes',
+        'service-1b-desc': 'Public classes for beginners. Learn in a group and have fun.',
+        'service-1b-price': 'Weekly Class',
         'service-2-title': '⭐ Private Classes',
         'service-2-desc': 'Individual or couples classes. Personalized attention according to your needs.',
         'service-2-price': 'Per Hour',
@@ -225,10 +229,8 @@ const translations = {
         'service-5-desc': 'We work with hotels and establishments with commission model.',
         'service-5-price': 'Commission',
         'service-cta': 'Quote',
-        'discount-note': '20% discount on continuous weekly classes!',
+        'discount-note': '20% discount from your second class!',
         'discount-weekly': '60.000 COP if weekly',
-        'price-per-hour': 'Per Hour',
-        'price-weekly': 'Weekly',
 
         // Gallery
         'gallery-tag': 'Our Portfolio',
@@ -371,6 +373,9 @@ const translations = {
         'service-1-title': '🎓 Cours Débutants',
         'service-1-desc': 'Apprentissage à partir de zéro. Cours d\'introduction parfaits pour commencer votre voyage dans la danse.',
         'service-1-price': 'Cours Unique',
+        'service-1b-title': '👥 Cours Collectifs Débutants',
+        'service-1b-desc': 'Cours publics pour débutants. Apprenez en groupe et amusez-vous.',
+        'service-1b-price': 'Cours Hebdomadaire',
         'service-2-title': '⭐ Cours Personnalisés',
         'service-2-desc': 'Cours individuels ou pour couples. Attention personnalisée selon vos besoins.',
         'service-2-price': 'Par Heure',
@@ -385,7 +390,7 @@ const translations = {
         'service-5-desc': 'Nous travaillons avec les hôtels et établissements avec modèle de commission.',
         'service-5-price': 'Commission',
         'service-cta': 'Devis',
-        'discount-note': '20% de remise sur les cours hebdomadaires continus!',
+        'discount-note': '20% de remise à partir de votre deuxième cours!',
         'discount-weekly': '60.000 COP si hebdomadaire',
         'price-per-hour': 'Par Heure',
         'price-weekly': 'Hebdomadaire',
@@ -531,6 +536,9 @@ const translations = {
         'service-1-title': '🎓 Anfängerkurse',
         'service-1-desc': 'Lernen von Grund auf. Einführungskurse perfekt, um Ihre Tanzreise zu beginnen.',
         'service-1-price': 'Einzelkurs',
+        'service-1b-title': '👥 Anfängergemeinschaftskurse',
+        'service-1b-desc': 'Öffentliche Kurse für Anfänger. Lernen Sie in einer Gruppe und haben Sie Spaß.',
+        'service-1b-price': 'Wöchentlicher Kurs',
         'service-2-title': '⭐ Private Kurse',
         'service-2-desc': 'Einzel- oder Paarkurse. Personalisierte Aufmerksamkeit nach Ihren Bedürfnissen.',
         'service-2-price': 'Pro Stunde',
@@ -545,10 +553,8 @@ const translations = {
         'service-5-desc': 'Wir arbeiten mit Hotels und Einrichtungen mit Kommissionsmodell.',
         'service-5-price': 'Kommission',
         'service-cta': 'Angebot',
-        'discount-note': '20% Rabatt auf kontinuierliche wöchentliche Kurse!',
+        'discount-note': '20% Rabatt ab Ihrem zweiten Kurs!',
         'discount-weekly': '60.000 COP wenn wöchentlich',
-        'price-per-hour': 'Pro Stunde',
-        'price-weekly': 'Wöchentlich',
 
         // Gallery
         'gallery-tag': 'Unser Portfolio',
@@ -1028,20 +1034,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
-    
-    // Pricing Toggle
-    const pricingToggle = document.getElementById('pricingToggle');
-    const pricingContainer = document.querySelector('.pricing-toggle');
-    
-    if (pricingToggle && pricingContainer) {
-        pricingToggle.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                pricingContainer.classList.add('checked');
-            } else {
-                pricingContainer.classList.remove('checked');
-            }
-        });
-    }
 });
 
 console.log('Portfolio loaded successfully! 🎭💃');
