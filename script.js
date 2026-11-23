@@ -67,6 +67,8 @@ const translations = {
         'service-cta': 'Cotizar',
         'discount-note': '¡20% de descuento en clases semanales continuas!',
         'discount-weekly': '60.000 COP si es semanal',
+        'price-per-hour': 'Por Hora',
+        'price-weekly': 'Semanal',
 
         // Gallery
         'gallery-tag': 'Nuestro Portafolio',
@@ -225,6 +227,8 @@ const translations = {
         'service-cta': 'Quote',
         'discount-note': '20% discount on continuous weekly classes!',
         'discount-weekly': '60.000 COP if weekly',
+        'price-per-hour': 'Per Hour',
+        'price-weekly': 'Weekly',
 
         // Gallery
         'gallery-tag': 'Our Portfolio',
@@ -383,6 +387,8 @@ const translations = {
         'service-cta': 'Devis',
         'discount-note': '20% de remise sur les cours hebdomadaires continus!',
         'discount-weekly': '60.000 COP si hebdomadaire',
+        'price-per-hour': 'Par Heure',
+        'price-weekly': 'Hebdomadaire',
 
         // Gallery
         'gallery-tag': 'Notre Portfolio',
@@ -541,6 +547,8 @@ const translations = {
         'service-cta': 'Angebot',
         'discount-note': '20% Rabatt auf kontinuierliche wöchentliche Kurse!',
         'discount-weekly': '60.000 COP wenn wöchentlich',
+        'price-per-hour': 'Pro Stunde',
+        'price-weekly': 'Wöchentlich',
 
         // Gallery
         'gallery-tag': 'Unser Portfolio',
@@ -974,6 +982,66 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
+    
+    // Scroll-Triggered Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Smooth Scroll with Parallax
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Pricing Toggle
+    const pricingToggle = document.getElementById('pricingToggle');
+    const pricingContainer = document.querySelector('.pricing-toggle');
+    
+    if (pricingToggle && pricingContainer) {
+        pricingToggle.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                pricingContainer.classList.add('checked');
+            } else {
+                pricingContainer.classList.remove('checked');
+            }
+        });
+    }
 });
 
 console.log('Portfolio loaded successfully! 🎭💃');

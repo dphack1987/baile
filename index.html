@@ -195,21 +195,30 @@
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="services-tag">Nuestros Servicios</span>
                 <h2 data-i18n="services-title">💃 Tipos de Clases 🕺</h2>
                 <p data-i18n="services-subtitle">Personalizadas, principiantes y eventos especiales para todos los niveles</p>
+                <div class="pricing-toggle">
+                    <span class="toggle-label" data-i18n="price-per-hour">Por Hora</span>
+                    <label class="switch">
+                        <input type="checkbox" id="pricingToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label" data-i18n="price-weekly">Semanal</span>
+                </div>
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal-on-scroll" style="animation-delay: 0.1s">
                     <div class="service-icon-wrapper">
                         <i class="fas fa-user-graduate"></i>
                     </div>
                     <h3 data-i18n="service-1-title">🎓 Clases Principiantes</h3>
                     <p data-i18n="service-1-desc">Aprendizaje desde cero. Clases introductorias perfectas para comenzar tu viaje en el baile.</p>
                     <div class="service-price">
-                        <span class="price-amount">100.000 COP</span>
+                        <span class="price-amount price-hourly">100.000 COP</span>
+                        <span class="price-amount price-weekly">80.000 COP</span>
                         <span class="price-label" data-i18n="service-1-price">Clase Única</span>
                     </div>
                     <p class="discount-note" data-i18n="discount-note">¡20% de descuento en clases semanales continuas!</p>
@@ -226,7 +235,8 @@
                     <h3 data-i18n="service-2-title">⭐ Clases Personalizadas</h3>
                     <p data-i18n="service-2-desc">Clases individuales o para parejas. Atención personalizada según tus necesidades.</p>
                     <div class="service-price">
-                        <span class="price-amount">120.000 COP</span>
+                        <span class="price-amount price-hourly">120.000 COP</span>
+                        <span class="price-amount price-weekly">96.000 COP</span>
                         <span class="price-label" data-i18n="service-2-price">Por Hora</span>
                     </div>
                     <p class="discount-note" data-i18n="discount-note">¡20% de descuento en clases semanales continuas!</p>
@@ -242,7 +252,8 @@
                     <h3 data-i18n="service-3-title">🎉 Rumbaterapia</h3>
                     <p data-i18n="service-3-desc">¡Diviértete y muévete! Clases para liberar estrés y disfrutar.</p>
                     <div class="service-price">
-                        <span class="price-amount">80.000 COP</span>
+                        <span class="price-amount price-hourly">80.000 COP</span>
+                        <span class="price-amount price-weekly">60.000 COP</span>
                         <span class="price-label" data-i18n="service-3-price">Por Hora</span>
                     </div>
                     <p class="discount-note" data-i18n="discount-weekly">60.000 COP si es semanal</p>
@@ -331,7 +342,7 @@
     <!-- Gallery Section -->
     <section id="galeria" class="gallery">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="gallery-tag">Nuestro Portafolio</span>
                 <h2 data-i18n="gallery-title">📸 Galería de Experiencias</h2>
                 <p data-i18n="gallery-subtitle">Descubre la magia de nuestras clases a través de imágenes y videos</p>
@@ -472,7 +483,7 @@
     <!-- Classes Gallery Section -->
     <section class="classes-gallery">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="classes-tag">Clases en Acción</span>
                 <h2 data-i18n="classes-title">🎭 Momentos Memorables</h2>
                 <p data-i18n="classes-subtitle">Fotos reales de nuestras clases en hoteles</p>
@@ -517,7 +528,7 @@
     <!-- Dance Styles Section -->
     <section class="dance-styles">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="styles-tag">Estilos de Baile</span>
                 <h2 data-i18n="styles-title">🎶 Estilos que Ofrecemos</h2>
                 <p data-i18n="styles-subtitle">Salsa, Bachata, Merengue y Salsa Choke para todos los niveles</p>
@@ -551,7 +562,7 @@
     <!-- Instructor Section -->
     <section class="instructor-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-on-scroll">
                 <span class="section-tag" data-i18n="instructor-tag">Tu Instructor</span>
                 <h2 data-i18n="instructor-title">👨‍🏫 Nicolás Garzón Mesa</h2>
                 <p data-i18n="instructor-subtitle">Licenciado en Educación física, recreación y deportes</p>
