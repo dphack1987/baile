@@ -24,6 +24,83 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.loading-logo h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.loading-logo .logo-accent {
+    color: var(--accent-color);
+}
+
+.loading-spinner {
+    margin-bottom: 1.5rem;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.loading-dots {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.loading-dots span {
+    animation: dots 1.4s infinite;
+    opacity: 0;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dots {
+    0%, 20% { opacity: 0; }
+    40% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -87,9 +164,11 @@ h1, h2, h3 {
 
 /* Header */
 .header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-sm);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     position: fixed;
     width: 100%;
     top: 0;
@@ -562,20 +641,41 @@ h1, h2, h3 {
 }
 
 .service-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     transition: var(--transition);
-    border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-color: var(--primary-color);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(244, 162, 97, 0.1) 100%);
+    opacity: 0;
+    transition: var(--transition);
+    border-radius: 20px;
+}
+
+.service-card:hover::before {
+    opacity: 1;
 }
 
 .service-card.featured {

@@ -913,17 +913,6 @@ videoItems.forEach(item => {
     });
 });
 
-// Add hover effect to service cards
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
 // Gallery image lazy loading optimization
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -953,6 +942,38 @@ document.addEventListener('click', () => {
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
+    
+    // Loading Screen
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1500);
+        });
+    }
+    
+    // Enhanced 3D Tilt Effect for Service Cards
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
 });
 
 console.log('Portfolio loaded successfully! 🎭💃');
